@@ -96,7 +96,7 @@ class PaymateExpressPayment extends Payment {
 		$controller = new Page_Controller($page);
 		$form = $controller->renderWith("PaymentProcessingPage");
         
-		return new Payment_Processing($form);
+		return EcommercePayment_Processing::create($form);
 	}
     
     //TODO: disconnect this from e-commerce
